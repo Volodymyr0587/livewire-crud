@@ -18,8 +18,8 @@
         @include('livewire.includes.todo-card')
         @endforeach
 
-        <div class="my-2">
-            <!-- Pagination goes here -->
+        <div class="mt-2 mb-4">
+            {{ $todos->links() }}
         </div>
     </div>
 </div>
