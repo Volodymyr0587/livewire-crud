@@ -31,9 +31,9 @@ class TodoList extends Component
 
         $this->reset('name');
 
-        session()->flash('success', 'Task Created');
-
         $this->resetPage();
+
+        session()->flash('success', 'Task Created');
     }
 
     public function delete($todoID)
@@ -70,6 +70,7 @@ class TodoList extends Component
             'name' => $this->editingTodoName,
         ]);
 
+        session()->flash('success', 'Task Updated');
         $this->cancelEdit();
     }
 
